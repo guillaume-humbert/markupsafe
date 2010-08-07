@@ -1,3 +1,9 @@
+markupsafe (0.9.2-2) UNRELEASED; urgency=low
+
+  * Use ${python3:Depends} in python3-markupsafe package (closes: 591953)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 06 Aug 2010 22:40:50 -0400
+
 markupsafe (0.9.2-1) unstable; urgency=low
 
   * Initial release

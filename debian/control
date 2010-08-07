@@ -48,7 +48,7 @@ Description: XML/HTML/XHTML Markup safe string for Python
 
 Package: python3-markupsafe
 Architecture: any
-Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
 Description: XML/HTML/XHTML Markup safe string for Python3
  MarkupSafe implements a unicode subclass that supports HTML strings:
  .
