@@ -73,6 +73,6 @@ Package: python3-markupsafe-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: python3-markupsafe (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+Depends: python3-markupsafe (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, ${python3:Depends}
 Description: XML/HTML/XHTML Markup safe string for Python3
  This package contains the extension built for the Python3 debug interpreter.
