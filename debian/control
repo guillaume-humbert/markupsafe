@@ -4,10 +4,10 @@ Priority: optional
 Maintainer: Piotr Ożarowski <piotr@debian.org>
 Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 5),
- python-all-dev (>= 2.6.5-2), python3-all-dev (>= 3.1.2-2),
+ python-all-dev (>= 2.6.5-2), python3-all-dev (>= 3.1.2-6~),
  python-all-dbg, python3-all-dbg,
  python-setuptools, python3-setuptools
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Homepage: http://pypi.python.org/pypi/MarkupSafe
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/markupsafe/trunk
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/markupsafe/trunk/
