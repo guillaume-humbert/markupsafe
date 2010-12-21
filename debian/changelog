@@ -1,3 +1,12 @@
+markupsafe (0.11-2+exp1) experimental; urgency=low
+
+  * Rebuild for Python 2.7 and 3.2 extension (minimum required python-all's
+    version temporary bumped to 2.6.6-4, python-setuptools' to 0.6.14-5
+    and python3-all's to 3.1.2-14 to make sure the right version from
+    experimental will be used).
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 21 Dec 2010 21:37:21 +0100
+
 markupsafe (0.11-2) experimental; urgency=low
 
   * Rebuild against newer python3-all-dev package (python3.1 now uses
