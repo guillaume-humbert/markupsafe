@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: MarkupSafe
-Version: 0.11
+Version: 0.12
 Summary: Implements a XML/HTML/XHTML Markup safe string for Python
 Home-page: http://dev.pocoo.org/
 Author: Armin Ronacher
