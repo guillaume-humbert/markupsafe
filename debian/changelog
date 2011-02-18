@@ -1,3 +1,9 @@
+markupsafe (0.12-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 18 Feb 2011 23:35:29 +0100
+
 markupsafe (0.11-2) experimental; urgency=low
 
   * Rebuild against newer python3-all-dev package (python3.1 now uses
