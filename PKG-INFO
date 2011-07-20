@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: MarkupSafe
-Version: 0.12
+Version: 0.15
 Summary: Implements a XML/HTML/XHTML Markup safe string for Python
 Home-page: http://dev.pocoo.org/
 Author: Armin Ronacher
@@ -48,14 +48,14 @@ Description: MarkupSafe
         If you also want to use this for the escape method of the Markup
         object, you can create your own subclass that does that::
         
-        from markupsafe import Markup, escape_silent as escape
+            from markupsafe import Markup, escape_silent as escape
         
-        class SilentMarkup(Markup):
-        __slots__ = ()
+            class SilentMarkup(Markup):
+                __slots__ = ()
         
-        @classmethod
-        def escape(cls, s):
-        return cls(escape(s))
+                @classmethod
+                def escape(cls, s):
+                    return cls(escape(s))
         
 Platform: UNKNOWN
 Classifier: Development Status :: 5 - Production/Stable

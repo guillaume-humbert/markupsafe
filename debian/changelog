@@ -1,8 +1,9 @@
-markupsafe (0.12-2) unstable; urgency=low
+markupsafe (0.15-1) unstable; urgency=low
 
-  * Rebuild to add Python 2.7 and drop Python 2.5 support
+  * New upstream release
+  * Standards-Version bumped to 3.9.2 (no changes needed)
 
- -- Piotr Ożarowski <piotr@debian.org>  Sat, 16 Apr 2011 13:33:30 +0200
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 20 Jul 2011 19:37:59 +0200
 
 markupsafe (0.12-1) unstable; urgency=low
 
