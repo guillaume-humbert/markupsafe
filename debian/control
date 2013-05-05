@@ -9,8 +9,8 @@ Build-Depends: debhelper (>= 5),
  python-setuptools, python3-setuptools
 Standards-Version: 3.9.2
 Homepage: http://pypi.python.org/pypi/MarkupSafe
-Vcs-Svn: svn://svn.debian.org/python-modules/packages/markupsafe/trunk
-Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/markupsafe/trunk/
+Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/markupsafe/trunk/
+Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/markupsafe/trunk/
 XS-Python-Version: >= 2.4
 
 Package: python-markupsafe
