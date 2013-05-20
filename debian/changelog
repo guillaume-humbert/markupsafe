@@ -1,10 +1,12 @@
-markupsafe (0.16-1) unstable; urgency=low
+markupsafe (0.16-1) UNRELEASED; urgency=low
 
   [ Jakub Wilk ]
   * Use canonical URIs for Vcs-* fields.
 
   [ Piotr Ożarowski ]
   * New upstream release
+    - minimum required Python 3 version bumped to 3.3, python3-all-dev bumped
+      to 3.3.0-3~ to generate versioned py3compile maintainer script
   * Harden extension (debian/rules updated to export hardening build flags)
   * Standards-Version bumped to 3.9.4
     - add build-indep and build-arch targets in debian/rules
