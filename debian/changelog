@@ -1,8 +1,18 @@
-markupsafe (0.15-2) UNRELEASED; urgency=low
+markupsafe (0.16-1) unstable; urgency=low
 
+  [ Jakub Wilk ]
   * Use canonical URIs for Vcs-* fields.
 
- -- Jakub Wilk <jwilk@debian.org>  Sun, 05 May 2013 16:01:13 +0200
+  [ Piotr Ożarowski ]
+  * New upstream release
+  * Harden extension (debian/rules updated to export hardening build flags)
+  * Standards-Version bumped to 3.9.4
+    - add build-indep and build-arch targets in debian/rules
+  * debian/compat bumped to 9
+  * Package descriptions updated (thanks to Martin Eberhard Schauer and
+    Justin B Rye, closes: #682835)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 20 May 2013 23:25:11 +0200
 
 markupsafe (0.15-1) unstable; urgency=low
 
