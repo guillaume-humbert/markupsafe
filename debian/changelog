@@ -1,4 +1,4 @@
-markupsafe (0.16-1) UNRELEASED; urgency=low
+markupsafe (0.18-1) UNRELEASED; urgency=low
 
   [ Jakub Wilk ]
   * Use canonical URIs for Vcs-* fields.
@@ -14,7 +14,7 @@ markupsafe (0.16-1) UNRELEASED; urgency=low
   * Package descriptions updated (thanks to Martin Eberhard Schauer and
     Justin B Rye, closes: #682835)
 
- -- Piotr Ożarowski <piotr@debian.org>  Mon, 20 May 2013 23:25:11 +0200
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 22 May 2013 23:43:13 +0200
 
 markupsafe (0.15-1) unstable; urgency=low
 
