@@ -1,8 +1,8 @@
 Metadata-Version: 1.0
 Name: MarkupSafe
-Version: 0.15
+Version: 0.18
 Summary: Implements a XML/HTML/XHTML Markup safe string for Python
-Home-page: http://dev.pocoo.org/
+Home-page: http://github.com/mitsuhiko/markupsafe
 Author: Armin Ronacher
 Author-email: armin.ronacher@active-4.com
 License: BSD
@@ -20,7 +20,8 @@ Description: MarkupSafe
         
         If you want to make an object unicode that is not yet unicode
         but don't want to lose the taint information, you can use the
-        `soft_unicode` function:
+        `soft_unicode` function.  (On Python 3 you can also use `soft_str` which
+        is a different name for the same function).
         
         >>> from markupsafe import soft_unicode
         >>> soft_unicode(42)

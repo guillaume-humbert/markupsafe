@@ -1,23 +1,28 @@
 #!/usr/bin/make -f
 
 #export DH_VERBOSE=1
-PYVERS=$(shell pyversions -vr) $(shell py3versions -sv)
+PYVERS=$(shell pyversions -vr) $(shell py3versions -vr)
 
 include /usr/share/python/python.mk
 pkgdir = $(CURDIR)/debian/python$(if $(patsubst 3.%,,$(1)),,3)-markupsafe
+
+DPKG_EXPORT_BUILDFLAGS = 1
+-include /usr/share/dpkg/buildflags.mk
 
 clean:
 	dh_testdir
 	dh_testroot
 	rm -rf dist build MarkupSafe.egg-info
 	find . -name '*\.pyc' -delete
-	dh_clean install-stamp build-stamp \
+	dh_clean install-stamp build-arch \
 		$(PYVERS:%=install-python%) $(PYVERS:%=build-python%) \
 		$(PYVERS:%=install-debug-python%) $(PYVERS:%=build-debug-python%)
 
-build: build-stamp
+build: build-arch
 
-build-stamp: $(PYVERS:%=build-python%) $(PYVERS:%=build-debug-python%)
+build-indep:
+
+build-arch: $(PYVERS:%=build-python%) $(PYVERS:%=build-debug-python%)
 	touch $@
 
 build-python%:
