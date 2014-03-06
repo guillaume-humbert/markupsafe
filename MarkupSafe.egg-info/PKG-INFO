@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: MarkupSafe
-Version: 0.18
+Version: 0.19
 Summary: Implements a XML/HTML/XHTML Markup safe string for Python
 Home-page: http://github.com/mitsuhiko/markupsafe
 Author: Armin Ronacher

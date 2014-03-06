@@ -1,6 +1,6 @@
 import os
 import sys
-from setuptools import setup, Extension, Feature
+from setuptools import setup, Extension
 from distutils.command.build_ext import build_ext
 from distutils.errors import CCompilerError, DistutilsExecError, \
     DistutilsPlatformError
@@ -13,13 +13,14 @@ is_jython = 'java' in sys.platform
 is_pypy = hasattr(sys, 'pypy_version_info')
 
 
-speedups = Feature(
-    'optional C speed-enhancement module',
-    standard=True,
-    ext_modules = [
-        Extension('markupsafe._speedups', ['markupsafe/_speedups.c']),
-    ],
-)
+# Remove old arguments that were once supported.  Thanks setuptools
+# 3.0 for just randomly removing functionality.
+for arg in '--with-speedups', '--without-speedups':
+    try:
+        sys.argv.remove(arg)
+    except ValueError:
+        pass
+
 
 ext_errors = (CCompilerError, DistutilsExecError, DistutilsPlatformError)
 if sys.platform == 'win32' and sys.version_info > (2, 6):
@@ -61,12 +62,11 @@ readme = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 
 def run_setup(with_binary):
-    features = {}
-    if with_binary:
-        features['speedups'] = speedups
+    ext = Extension('markupsafe._speedups', ['markupsafe/_speedups.c'])
+    ext_modules = [ext] if with_binary else []
     setup(
         name='MarkupSafe',
-        version='0.18',
+        version='0.19',
         url='http://github.com/mitsuhiko/markupsafe',
         license='BSD',
         author='Armin Ronacher',
@@ -90,7 +90,7 @@ def run_setup(with_binary):
         test_suite='markupsafe.tests.suite',
         include_package_data=True,
         cmdclass={'build_ext': ve_build_ext},
-        features=features,
+        ext_modules=ext_modules,
     )
 
 

@@ -26,11 +26,11 @@ build-arch: $(PYVERS:%=build-python%) $(PYVERS:%=build-debug-python%)
 	touch $@
 
 build-python%:
-	python$* setup.py --with-speedups build
+	python$* setup.py build
 	touch $@
 
 build-debug-python%:
-	python$*-dbg setup.py --with-speedups build
+	python$*-dbg setup.py build
 	touch $@
 
 install: install-stamp
@@ -39,7 +39,7 @@ install-stamp: $(PYVERS:%=install-python%) $(PYVERS:%=install-debug-python%)
 	touch $@
 
 install-python%: build
-	python$* setup.py --with-speedups install \
+	python$* setup.py install \
 		--install-layout=deb --skip-build \
 		--single-version-externally-managed \
 		--root $(call pkgdir,$*)
@@ -47,7 +47,7 @@ install-python%: build
 	touch $@
 
 install-debug-python%: build
-	python$*-dbg setup.py --with-speedups install \
+	python$*-dbg setup.py install \
 		--install-layout=deb --skip-build \
 		--single-version-externally-managed \
 		--root $(call pkgdir,$*)-dbg/
