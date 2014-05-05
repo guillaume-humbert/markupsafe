@@ -1,3 +1,9 @@
+markupsafe (0.21-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 05 May 2014 22:11:16 +0200
+
 markupsafe (0.19-1) unstable; urgency=medium
 
   * New upstream release
