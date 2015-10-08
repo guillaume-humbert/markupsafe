@@ -6,3 +6,6 @@
 markupsafe_0.23.orig.tar.gz
 cd5c22acf6dd69046d6cb6a3920d84ea66bdf62a
 13416
+debianTag="debian/%e%v"
+patchedTag="patched/%e%v"
+upstreamTag="upstream/%e%u"
