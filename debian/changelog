@@ -5,6 +5,7 @@ markupsafe (0.23-3) UNRELEASED; urgency=medium
 
   [ Ondřej Nový ]
   * Fixed homepage (https)
+  * Fixed VCS URL (https)
 
  -- Piotr Ożarowski <piotr@debian.org>  Thu, 20 Aug 2015 00:54:39 +0200
 
