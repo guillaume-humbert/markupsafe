@@ -2,6 +2,7 @@ markupsafe (0.23-3) UNRELEASED; urgency=medium
 
   [ Piotr Ożarowski ]
   * Add dh-python to Build-Depends
+  * dh_builddeb now uses the default compression (xz) instead of bzip2
 
   [ Ondřej Nový ]
   * Fixed homepage (https)
