@@ -1,11 +1,11 @@
 # see git-dpm(1) from git-dpm package
-38aa1956b94a91cf8538c1ca97ec1a577d2a1709
-38aa1956b94a91cf8538c1ca97ec1a577d2a1709
-38aa1956b94a91cf8538c1ca97ec1a577d2a1709
-38aa1956b94a91cf8538c1ca97ec1a577d2a1709
-markupsafe_0.23.orig.tar.gz
-cd5c22acf6dd69046d6cb6a3920d84ea66bdf62a
-13416
+feb908e3c2d98649ff6c09fe115bc8b7edec158c
+feb908e3c2d98649ff6c09fe115bc8b7edec158c
+feb908e3c2d98649ff6c09fe115bc8b7edec158c
+feb908e3c2d98649ff6c09fe115bc8b7edec158c
+markupsafe_1.0.orig.tar.gz
+9072e80a7faa0f49805737a48f3d871eb1c48728
+14356
 debianTag="debian/%e%v"
 patchedTag="patched/%e%v"
 upstreamTag="upstream/%e%u"
