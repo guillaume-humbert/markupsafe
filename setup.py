@@ -1,6 +1,9 @@
+#!/usr/bin/env python
 import os
+import re
+import ast
 import sys
-from setuptools import setup, Extension
+from setuptools import setup, Extension, Feature
 from distutils.command.build_ext import build_ext
 from distutils.errors import CCompilerError, DistutilsExecError, \
      DistutilsPlatformError
@@ -12,21 +15,29 @@ from distutils.errors import CCompilerError, DistutilsExecError, \
 is_jython = 'java' in sys.platform
 is_pypy = hasattr(sys, 'pypy_version_info')
 
-
-# Remove old arguments that were once supported.  Thanks setuptools
-# 3.0 for just randomly removing functionality.
-for arg in '--with-speedups', '--without-speedups':
-    try:
-        sys.argv.remove(arg)
-    except ValueError:
-        pass
+with open('markupsafe/__init__.py') as f:
+    version = ast.literal_eval(re.search(
+        '^__version__\s+=\s+(.*?)$(?sm)', f.read()).group(1))
 
 
+speedups = Feature(
+    'optional C speed-enhancement module',
+    standard=True,
+    ext_modules=[
+        Extension('markupsafe._speedups', ['markupsafe/_speedups.c']),
+    ],
+)
+
+# Known errors when running build_ext.build_extension method
 ext_errors = (CCompilerError, DistutilsExecError, DistutilsPlatformError)
 if sys.platform == 'win32' and sys.version_info > (2, 6):
     # 2.6's distutils.msvc9compiler can raise an IOError when failing to
     # find the compiler
     ext_errors += (IOError,)
+# Known errors when running build_ext.run method
+run_errors = (DistutilsPlatformError,)
+if sys.platform == 'darwin':
+    run_errors += (SystemError,)
 
 
 class BuildFailed(Exception):
@@ -39,7 +50,7 @@ class ve_build_ext(build_ext):
     def run(self):
         try:
             build_ext.run(self)
-        except DistutilsPlatformError:
+        except run_errors:
             raise BuildFailed()
 
     def build_extension(self, ext):
@@ -62,12 +73,13 @@ readme = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 
 def run_setup(with_binary):
-    ext = Extension('markupsafe._speedups', ['markupsafe/_speedups.c'])
-    ext_modules = [ext] if with_binary else []
+    features = {}
+    if with_binary:
+        features['speedups'] = speedups
     setup(
         name='MarkupSafe',
-        version='0.23',
-        url='http://github.com/mitsuhiko/markupsafe',
+        version=version,
+        url='http://github.com/pallets/markupsafe',
         license='BSD',
         author='Armin Ronacher',
         author_email='armin.ronacher@active-4.com',
@@ -87,10 +99,10 @@ def run_setup(with_binary):
             'Topic :: Text Processing :: Markup :: HTML'
         ],
         packages=['markupsafe'],
-        test_suite='markupsafe.tests.suite',
+        test_suite='tests.suite',
         include_package_data=True,
         cmdclass={'build_ext': ve_build_ext},
-        ext_modules=ext_modules,
+        features=features,
     )
 
 

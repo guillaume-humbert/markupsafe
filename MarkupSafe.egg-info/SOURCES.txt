@@ -1,8 +1,11 @@
 AUTHORS
+CHANGES
 LICENSE
 MANIFEST.in
 README.rst
+setup.cfg
 setup.py
+tests.py
 MarkupSafe.egg-info/PKG-INFO
 MarkupSafe.egg-info/SOURCES.txt
 MarkupSafe.egg-info/dependency_links.txt
@@ -13,4 +16,3 @@ markupsafe/_compat.py
 markupsafe/_constants.py
 markupsafe/_native.py
 markupsafe/_speedups.c
-markupsafe/tests.py
