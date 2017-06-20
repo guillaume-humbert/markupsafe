@@ -1,6 +1,7 @@
 markupsafe (1.0-1) unstable; urgency=medium
 
   * New upstream release
+  * Standards-Version bumped to 4.0.0 (no changes needed)
 
  -- Piotr Ożarowski <piotr@debian.org>  Tue, 20 Jun 2017 15:56:37 +0200
 
