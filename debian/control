@@ -26,7 +26,6 @@ Description: HTML/XHTML/XML string library for Python
 Package: python-markupsafe-dbg
 Architecture: any
 Section: debug
-Priority: extra
 Depends: python-markupsafe (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
 Description: HTML/XHTML/XML string library for Python - debug version
  MarkupSafe is a Python library implementing a unicode subclass that is
@@ -48,7 +47,6 @@ Description: HTML/XHTML/XML string library for Python 3
 Package: python3-markupsafe-dbg
 Architecture: any
 Section: debug
-Priority: extra
 Depends: python3-markupsafe (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, ${python3:Depends}
 Description: HTML/XHTML/XML string library for Python 3 - debug version
  MarkupSafe is a Python library implementing a unicode subclass that is
