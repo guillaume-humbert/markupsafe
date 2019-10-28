@@ -79,4 +79,8 @@ binary-indep:
 
 binary: binary-indep binary-arch
 
+override_dh_auto_clean:
+	rm -rf build/ build-* install-*
+	git checkout -- src/MarkupSafe.egg-info/SOURCES.txt || echo -n
+
 .PHONY: build clean binary-indep binary-arch binary install

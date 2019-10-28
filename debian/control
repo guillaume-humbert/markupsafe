@@ -3,14 +3,16 @@ Section: python
 Priority: optional
 Maintainer: Piotr Ożarowski <piotr@debian.org>
 Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Build-Depends: debhelper-compat (= 9), dh-python,
+Build-Depends: debhelper (>= 10~), dh-python,
  python-all-dev (>= 2.6.5-2), python3-all-dev (>= 3.3.0-3~),
  python-all-dbg, python3-all-dbg,
  python-setuptools, python3-setuptools
-Standards-Version: 4.0.0
+Standards-Version: 4.1.4
 Homepage: https://pypi.python.org/pypi/MarkupSafe
-Vcs-Git: https://salsa.debian.org/python-team/modules/markupsafe.git
-Vcs-Browser: https://salsa.debian.org/python-team/modules/markupsafe
+Vcs-Git: https://github.com/guillaume-humbert/markupsafe.git
+Vcs-Browser: https://github.com/guillaume-humbert/markupsafe
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.6
 
 Package: python-markupsafe
 Architecture: any
